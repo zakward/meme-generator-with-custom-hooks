@@ -1,16 +1,25 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
+import { Routes, Route } from "react-router-dom"
 import { Context } from "./context/ContextProvider.jsx";
-import Form from './components/Form.jsx';
-import MemeList from './components/MemeList.jsx';
+import Home from './components/Home.jsx';
+import Navbar from './components/Navbar.jsx';
+import SavedMemes from './components/SavedMemes.jsx';
+
 
 
 function App() {
 
 
-  return (  
+  return (
     <>
-      <Form />
-      <MemeList />
+      <div id="app-container">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/savedMemes" element={<SavedMemes />} />
+        </Routes>
+      </div>
+
     </>
   );
 }

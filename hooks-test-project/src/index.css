@@ -1,10 +1,92 @@
+#app-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
 .prev-div{
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border: 3px solid black;
+
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  height: 75px;
+  width: 100vw;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#add-form{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 500px;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: slategrey;
+}
+
+.input{
+  min-width: 350px;
+}
+
+.form-buttons{
+  max-width: 100px;
+  cursor: pointer;
+}
+
+.button-div{
+  display: flex;
+  gap: 20px;
+
+}
+
+.nav-buttons{
+  cursor: pointer;
+}
+
+#saved-memes-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* height: 100vh; */
+  gap: 50px;
+  /* position: relative;
+  top: 80px; */
+}
+
+#meme-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 500px;
+  border: 3px solid black;
+  gap: 10px;
+  background-color: slategrey;
+}
+
+#add-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }

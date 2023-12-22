@@ -9,7 +9,7 @@ function Form() {
     const [inputs, setInputs] = useState({
         topText: "",
         bottomText: "",
-        imgUrl: "https://i.imgflip.com/30b1gx.jpg"
+        imgUrl: "https://i.imgflip.com/24y43o.jpg"
     })
 
     const handleChange = (e) => {
@@ -35,6 +35,7 @@ function Form() {
     const addMeme = (e) => {
         e.preventDefault()
         saveMeme(inputs)
+        alert('You have successfully added a new Meme to your Saved Memes')
     }
 
 
@@ -46,11 +47,11 @@ function Form() {
     }, []);
     return (
         <>
-            <form onSubmit = {addMeme}>
-                <input placeholder='top text' name = "topText" value ={inputs.topText} onChange = {handleChange}/>
-                <input placeholder='bottom text' name = "bottomText" value ={inputs.bottomText} onChange = {handleChange}/>
-                <button onClick = {randomMeme}>Get New Meme</button>
-                <button>Save Meme</button>
+            <form id = "add-form" onSubmit = {addMeme}>
+                <input placeholder='top text' name = "topText" value ={inputs.topText} onChange = {handleChange} className = "input"/>
+                <input placeholder='bottom text' name = "bottomText" value ={inputs.bottomText} onChange = {handleChange} className = "input"/>
+                <button onClick = {randomMeme} className = "form-buttons">Get New Meme</button>
+                <button className = "form-buttons">Save Meme</button>
             </form>
             <div className = "prev-div" style = {{backgroundImage : `url(${inputs.imgUrl})`}}>
                 <h1>{inputs.topText}</h1>
