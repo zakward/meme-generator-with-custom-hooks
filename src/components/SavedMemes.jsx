@@ -3,9 +3,12 @@ import MemeList from "./MemeList";
 
 
 function SavedMemes() {
-    return ( 
-        <MemeList />
-     );
+    return (
+        <>
+            <h1>Your Saved Memes</h1>
+            <MemeList />
+        </>
+    );
 }
 
 export default SavedMemes
